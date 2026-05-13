@@ -1,7 +1,7 @@
 "use client";
 import { AnimatePresence, motion } from "motion/react";
 import { useState, useEffect } from "react";
-import type { LayerKey } from "@/slides/manifest";
+import type { LayerKey } from "@/slides/v2/manifest";
 
 function Bg({ src }: { src: string }) {
   const [failed, setFailed] = useState(false);

@@ -1,17 +1,17 @@
 "use client";
 import { useRouter } from "next/navigation";
 import { useCallback, useEffect, useState } from "react";
-import { slides } from "@/slides/manifest";
+import { slides } from "@/slides/v1/manifest";
 import World from "./World";
-import SlideRouter from "./SlideRouter";
+import SlideRouterV1 from "./SlideRouterV1";
 
-export default function DeckClient({ current }: { current: number }) {
+export default function DeckClientV1({ current }: { current: number }) {
   const router = useRouter();
   const [showNotes, setShowNotes] = useState(false);
 
   const go = useCallback((next: number) => {
     if (next < 1 || next > slides.length) return;
-    const navigate = () => router.push(`/deck/${next}`);
+    const navigate = () => router.push(`/deck/v1/${next}`);
     type VTDoc = Document & { startViewTransition?: (cb: () => void) => unknown };
     const doc = document as VTDoc;
     if (doc.startViewTransition) doc.startViewTransition(navigate);
@@ -34,9 +34,9 @@ export default function DeckClient({ current }: { current: number }) {
   return (
     <main className="fixed inset-0 overflow-hidden bg-cloud text-ink">
       <World layers={slide.layers} bg={slide.bg} />
-      <SlideRouter index={current} />
+      <SlideRouterV1 index={current} />
       <nav className="absolute bottom-4 left-4 right-4 flex items-center justify-between text-xs font-mono text-ink/60 select-none">
-        <span>{String(current).padStart(2, "0")} / {String(slides.length).padStart(2, "0")}</span>
+        <span>v1 · {String(current).padStart(2, "0")} / {String(slides.length).padStart(2, "0")}</span>
         <span className="tracking-widest">TRILOK · AIE SG · 2026</span>
         <span>→ next  ←  prev  ·  n notes  ·  f fullscreen</span>
       </nav>
