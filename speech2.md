@@ -69,14 +69,21 @@ Arc: autobiographical pull → metaphor → coding-as-environment → trajectory
 - Sets up slide 11.
 - DevSwarm is the experiment, CodeGraff is the conclusion.
 
-## 11 · CodeGraff on Forge (60s)
+## 11 · Fitness function (25s)
+
+> "Quick aside, in case you haven't seen the term: a fitness function is the score that decides which variants survive. Straight out of genetic algorithms. In a code agent, the harness is the thing that writes that score every run. Keep that in your head for the next slide."
+
+- Primer so the next punchline lands cleanly.
+- Don't dwell — it's an aside, not a lecture.
+
+## 12 · CodeGraff on Forge (60s)
 
 > "CodeGraff is built on top of Forge — SOTA on Terminal-Bench. The authors wrote a beautiful harness; I just added a few evolutionary steps drawn from DevSwarm's telemetry. When you prompt CodeGraff, it doesn't go to a single model. It fans out, the agents collaborate, orchestrate, and you get the answer fast. **The harness IS the fitness function.**"
 
 - This is the punchline of the talk.
 - Land "harness IS the fitness function" slowly. Don't rush the next slide.
 
-## 12 · Thanks (25s)
+## 13 · Thanks (25s)
 
 > "Everything is open source — github.com/justrach. 2026 is the year we get a real leap on autonomous agents. Excited to see where everyone takes it. Thanks for having me — Agrim, Sherry, Rachel, Adeline. Have a great conference."
 

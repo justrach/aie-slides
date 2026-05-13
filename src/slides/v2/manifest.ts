@@ -60,11 +60,15 @@ export const slides: SlideMeta[] = [
     layers: [],
     notes: "Older cat + many kittens, triune city. Sequential orchestration is weak. Swarm on one task. The selector inside CodeGraff is fed by DevSwarm telemetry." },
 
-  { index: 11, title: "CodeGraff on Forge", durationSec: 60, bg: "slide-17.png",
+  { index: 11, title: "Fitness function", durationSec: 25, bg: "slide-16.png",
+    layers: [],
+    notes: "Quick aside before the punchline. A fitness function is the score that decides which variants survive — straight from genetic algorithms. In a code agent, the harness writes that score every run. Sets up slide 12." },
+
+  { index: 12, title: "CodeGraff on Forge", durationSec: 60, bg: "slide-17.png",
     layers: [],
     notes: "Mature cat + many kittens. Forge = SOTA on Terminal-Bench, beautifully written. I added: trajectory store, multi-model fan-out, selector loop. Land the punchline: the harness IS the fitness function." },
 
-  { index: 12, title: "Thanks", durationSec: 25, bg: "slide-19.png",
+  { index: 13, title: "Thanks", durationSec: 25, bg: "slide-19.png",
     layers: [],
     notes: "Old cat at dawn with next generation. All OSS · github.com/justrach. 2026 is the leap year for autonomous agents. Thanks Agrim, Sherry, Rachel, Adeline." },
 ];
