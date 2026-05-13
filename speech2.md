@@ -50,7 +50,7 @@ Arc: autobiographical pull → metaphor → coding-as-environment → **the curv
 
 ## 10 · Muonry (45s)
 
-> "First thing I built was Muonry. First Zig tool I ever shipped. The numbers: 47 tokens for an outline vs 2,103 tokens for the default full read — that's 40× leaner file tools. 0.7 ms per op through the daemon. Ten reads in seven milliseconds, batched. Two-megabyte static binary, zero runtime deps. The agent doesn't notice the tools because they don't cost anything anymore."
+> "First thing I built was Muonry. It's a drop-in MCP upgrade for Claude Code, Codex, Cursor, and Windsurf — stops your agents burning weekly caps on full-file reads. Receipts: 344.5 million tokens saved across installs in the last thirty days. 14 thousand ops in the last week. 0.7 milliseconds per op through the daemon. 47 tokens for an outline instead of 2,103 for the full file your agent would otherwise read — 40× leaner. Shipping with Plasma, BotMD, and Trilok. → codegraff.com"
 
 ## 11 · CodeDB (35s)
 
@@ -67,9 +67,9 @@ Arc: autobiographical pull → metaphor → coding-as-environment → **the curv
 
 > "Quick aside, in case you haven't seen the term: a fitness function is the score that decides which variants survive. Straight out of genetic algorithms. In a code agent, the harness is the thing that writes that score every run. Keep that in your head for the next slide."
 
-## 15 · CodeGraff on Forge (60s)
+## 15 · CodeGraff (60s)
 
-> "CodeGraff is a drop-in MCP upgrade for Claude Code, Codex, Cursor, and Windsurf — built on top of Forge, SOTA on Terminal-Bench. I added a trajectory store, multi-model fan-out, and a selector loop fed by DevSwarm telemetry. Receipts: 344 million tokens saved across installs in the last thirty days. 14 thousand ops in the last week. 0.7 milliseconds per op through the daemon. 47 tokens for an outline instead of 2,103 for the full file your agent would otherwise read. Shipping with Plasma, BotMD, and Trilok. **The harness IS the fitness function.** → codegraff.com"
+> "CodeGraff is the harness — built on top of Forge, SOTA on Terminal-Bench. The authors wrote a beautiful base; I added a trajectory store with fitness vectors per spawn, multi-model fan-out so the agents collaborate in parallel, and a selector loop fed by DevSwarm telemetry. When you prompt CodeGraff it doesn't go to a single model — it fans out and the answers come back fast. **The harness IS the fitness function.**"
 
 - The punchline. Land it slowly.
 
