@@ -16,7 +16,7 @@ export interface SlideMeta {
 
 // v2 — reworked from speech2.m4a. 12 slides, ~10 min.
 // Autobiographical arc: open-endedness origin → Doctor Strange → coding env
-// paper → trajectory as artifact → my toolchain (Muonry / CodeDB / Nanoboo /
+// paper → trajectory as artifact → my toolchain (Muonry / CodeDB / Nanobrew /
 // DevSwarm) feeds CodeGraff on Forge → closer.
 // Coaching frame kept: "harness IS the fitness function" lands on slide 11.
 export const slides: SlideMeta[] = [
@@ -32,7 +32,7 @@ export const slides: SlideMeta[] = [
     layers: [],
     notes: "Young cat among scattered tools. The Marvel beat. Every loop the environment changes; eventually the agent just wins. This is where world models start mattering — the env isn't static, it's a thing the agent interacts with." },
 
-  { index: 4, title: "Code is the environment", durationSec: 55, bg: "slide-07.png",
+  { index: 4, title: "Code is the environment", durationSec: 55, bg: "slide-codeenv.png",
     layers: [],
     notes: "Adolescent cat at mature tree. Last year's paper extended open-endedness to code. Evolve the environment AND the agent. Tools aren't given — they get selected for." },
 
@@ -52,9 +52,9 @@ export const slides: SlideMeta[] = [
     layers: [],
     notes: "Adult cat beside inscribed tablet. Search is the agent's first sense organ. Make it free, the agent uses it more and reasons less from memory." },
 
-  { index: 9, title: "Nanoboo", durationSec: 40, bg: "slide-14.png",
+  { index: 9, title: "Nanobrew", durationSec: 40, bg: "slide-14.png",
     layers: [],
-    notes: "Mature cat at eval-yard gate. 'When I sleep, I want my agents to work.' Sandbox on a Hetzner cluster. apt-get was the bottleneck even with snapshots — Nanoboo makes it fast. More failures per night = more learning." },
+    notes: "Mature cat at eval-yard gate. 'When I sleep, I want my agents to work.' Sandbox on a Hetzner cluster. apt-get was the bottleneck — Nanobrew is a drop-in Homebrew/apt replacement in Zig (nanobrew.trilok.ai, github.com/justrach/nanobrew). 13× faster warm. More failures per night = more learning." },
 
   { index: 10, title: "DevSwarm", durationSec: 40, bg: "slide-18.png",
     layers: [],

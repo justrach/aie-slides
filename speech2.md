@@ -58,9 +58,9 @@ Arc: autobiographical pull → metaphor → coding-as-environment → trajectory
 
 > "Agents are good at searching text. So I hyper-accelerated that. CodeDB out-frameworks every other indexer I've thrown at it. Search is the agent's first sense organ. Make it free; the agent uses it more, and reasons less from memory."
 
-## 9 · Nanoboo (40s)
+## 9 · Nanobrew (40s)
 
-> "When I sleep, I want my agents to work. So I built one of the fastest sandboxes I know of — sitting in a Hetzner cluster. The slow part wasn't compute, it was `apt-get`. Even with snapshots. So Nanoboo was born. apt-get, but fast. More failures per night = more learning."
+> "When I sleep, I want my agents to work. The slow part inside the sandbox wasn't compute — it was `apt-get`. Even with snapshots. So I wrote Nanobrew: a drop-in Homebrew + apt-get replacement, in Zig. 13× faster on warm installs. More failures per night = more learning. → nanobrew.trilok.ai"
 
 ## 10 · DevSwarm (40s)
 
