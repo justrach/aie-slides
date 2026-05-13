@@ -2,18 +2,30 @@
 import { motion } from "motion/react";
 import type { ReactNode } from "react";
 
-// v2 shell: card sits TOP-LEFT by default — natural reading position,
-// painterly bg fills the rest. `align` retained for compatibility but
-// only swaps the horizontal slot.
-export function SlideShell({ children, align = "left" }: { children: ReactNode; align?: "left" | "right" | "center" }) {
-  const horiz =
-    align === "right"  ? "justify-end pr-10 md:pr-16" :
-    align === "center" ? "justify-center px-8" :
-                         "justify-start pl-10 md:pl-16";
+type Pos = "top-left" | "top-right" | "bottom-left" | "bottom-right" | "center";
+
+// v2 shell: card sits TOP-LEFT by default (natural reading position).
+// Per-slide override via `pos` for compositions where the painting
+// occupies a different corner.
+export function SlideShell({ children, pos = "top-left", align }: { children: ReactNode; pos?: Pos; align?: "left" | "right" | "center" }) {
+  // Backwards compat: if old `align` is passed, map it onto pos.
+  const effectivePos: Pos =
+    align === "right"  ? "top-right" :
+    align === "center" ? "center" :
+    align === "left"   ? "top-left"  :
+    pos;
+
+  const cls =
+    effectivePos === "top-right"    ? "items-start justify-end   pt-20 md:pt-24 pr-10 md:pr-16" :
+    effectivePos === "bottom-left"  ? "items-end   justify-start pb-20 md:pb-24 pl-10 md:pl-16" :
+    effectivePos === "bottom-right" ? "items-end   justify-end   pb-20 md:pb-24 pr-10 md:pr-16" :
+    effectivePos === "center"       ? "items-center justify-center px-8" :
+                                      "items-start justify-start pt-20 md:pt-24 pl-10 md:pl-16";
+
   return (
-    <div className={`absolute inset-0 flex items-start ${horiz} pt-20 md:pt-24 pointer-events-none`}>
+    <div className={`absolute inset-0 flex ${cls} pointer-events-none`}>
       <motion.div
-        initial={{ opacity: 0, y: -12 }}
+        initial={{ opacity: 0, y: effectivePos.startsWith("bottom") ? 12 : -12 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, ease: [0.4, 0, 0.2, 1], delay: 0.15 }}
         className="relative max-w-[42rem] text-ink px-8 py-7 rounded-xl"

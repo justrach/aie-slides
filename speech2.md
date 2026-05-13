@@ -32,13 +32,13 @@ Arc: autobiographical pull → metaphor → coding-as-environment → **world mo
 - Two evolving objects: **agent** + **environment**.
 - Tools aren't given. They're selected for.
 
-## 5 · Look at the evolution · world models (40s)
+## 5 · Look at the evolution · the curve (50s)
 
-> "And now zoom out. The environment doesn't have to stay 2-D. The natural next step is a real world model — an environment rich enough that an agent can actually interact with it, the way Doctor Strange interacts with Dormammu. Look at the curve. The little candle on the left? That's us today. The blazing sun on the right? That's where an agent in a real world model could end up — exponentially higher. This is what's coming."
+> "Now zoom out — and forget humans for a second, this is an AI-only curve. Step one: models. Step two, where we are today: models plus harnesses — the scaffolding around the model does the work. Step three: harnesses that evolve themselves — what I built. Step four: agents that evolve themselves, where the harness is just a substrate. Step five: world models — environments rich enough to actually train against. Step six: agents that *come out of* those world models. Look at the curve. We're step two. The galaxy at the top right is step six."
 
-- Quiet, aspirational beat.
-- Point at the curve. Don't over-explain.
-- Bridges: "and that's why the things I'm about to show you matter — they're the substrate that gets us there."
+- Six steps, escalating glow on the curve.
+- "Forget humans for a second" pre-empts the obvious objection.
+- Bridge: "that's the horizon. Now back to what I had to build to take even one step up."
 
 ## 6 · The trajectory, not the weights (35s)
 
