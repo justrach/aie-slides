@@ -50,12 +50,11 @@ Arc: autobiographical pull → metaphor → coding-as-environment → **the curv
 
 ## 10 · Muonry (45s)
 
-> "First thing I built was Muonry. First Zig tool I ever shipped — I'd written a lot of Rust before. When I saw the compile times I went: oh. The iteration loop got ten times tighter."
+> "First thing I built was Muonry. First Zig tool I ever shipped. The numbers: 47 tokens for an outline vs 2,103 tokens for the default full read — that's 40× leaner file tools. 0.7 ms per op through the daemon. Ten reads in seven milliseconds, batched. Two-megabyte static binary, zero runtime deps. The agent doesn't notice the tools because they don't cost anything anymore."
 
 ## 11 · CodeDB (35s)
 
-> "Agents are good at searching text. So I hyper-accelerated that. Search is the agent's first sense organ. Make it free; the agent uses it more, reasons less from memory."
-
+> "Agents are good at searching text — so I hyper-accelerated that. CodeDB: 538× faster than ripgrep on pre-indexed queries. Trigram v2 with O(1) inverted word index for identifier lookup. Sixteen MCP tools. Zero deps. Search is the agent's first sense organ — make it free and the agent uses it more, reasons less from memory. → github.com/justrach/codedb"
 ## 12 · Nanobrew (40s)
 
 > "When I sleep, I want my agents to work. The slow part inside the sandbox wasn't compute — it was `apt-get`. Even with snapshots. So I wrote Nanobrew: a drop-in Homebrew + apt-get replacement, in Zig. 13× faster on warm installs. → nanobrew.trilok.ai"
@@ -69,11 +68,11 @@ Arc: autobiographical pull → metaphor → coding-as-environment → **the curv
 > "Quick aside, in case you haven't seen the term: a fitness function is the score that decides which variants survive. Straight out of genetic algorithms. In a code agent, the harness is the thing that writes that score every run. Keep that in your head for the next slide."
 
 ## 15 · CodeGraff on Forge (60s)
+## 15 · CodeGraff on Forge (60s)
 
-> "CodeGraff is built on top of Forge — SOTA on Terminal-Bench. The authors wrote a beautiful harness; I just added a few evolutionary steps from DevSwarm's telemetry. When you prompt CodeGraff, it doesn't go to a single model. It fans out, the agents collaborate, orchestrate, you get the answer fast. **The harness IS the fitness function.**"
+> "CodeGraff is built on top of Forge — SOTA on Terminal-Bench. The authors wrote a beautiful harness; I added a trajectory store, multi-model fan-out, and a selector loop fed by DevSwarm telemetry. Receipts: 1.2 million tokens saved across installs in the last 30 days. 34 thousand ops in the last week. 0.7 ms per op through the daemon. When you prompt CodeGraff, it doesn't go to a single model — it fans out and the answers come back fast. **The harness IS the fitness function.** → codegraff.com"
 
 - The punchline. Land it slowly.
-
 ## 16 · Thanks (25s)
 
 > "Everything is open source — github.com/justrach. 2026 is the year we get a real leap on autonomous agents. Excited to see where everyone takes it. Thanks for having me — Agrim, Sherry, Rachel, Adeline. Have a great conference."
