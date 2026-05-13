@@ -69,7 +69,7 @@ Arc: autobiographical pull → metaphor → coding-as-environment → **the curv
 
 ## 15 · CodeGraff on Forge (60s)
 
-> "CodeGraff is built on top of Forge — SOTA on Terminal-Bench. The authors wrote a beautiful harness; I added a trajectory store, multi-model fan-out, and a selector loop fed by DevSwarm telemetry. Receipts: 1.2 million tokens saved across installs in the last 30 days. 34 thousand ops in the last week. 0.7 ms per op through the daemon. When you prompt CodeGraff, it doesn't go to a single model — it fans out and the answers come back fast. **The harness IS the fitness function.** → codegraff.com"
+> "CodeGraff is a drop-in MCP upgrade for Claude Code, Codex, Cursor, and Windsurf — built on top of Forge, SOTA on Terminal-Bench. I added a trajectory store, multi-model fan-out, and a selector loop fed by DevSwarm telemetry. Receipts: 344 million tokens saved across installs in the last thirty days. 14 thousand ops in the last week. 0.7 milliseconds per op through the daemon. 47 tokens for an outline instead of 2,103 for the full file your agent would otherwise read. Shipping with Plasma, BotMD, and Trilok. **The harness IS the fitness function.** → codegraff.com"
 
 - The punchline. Land it slowly.
 
