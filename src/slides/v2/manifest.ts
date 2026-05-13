@@ -41,7 +41,7 @@ export const slides: SlideMeta[] = [
     layers: [],
     notes: "Forget humans — AI-only. 6 stages: models → models+harnesses → models+self-evolving harnesses → self-evolving agents → world models → agents from world models. We're step 2. The galaxy at top-right is step 6." },
 
-  { index: 6, title: "2017 → today · log scale", durationSec: 45, bg: "slide-logscale.png",
+  { index: 6, title: "2018 → 2026 · benchmark receipts", durationSec: 50, bg: "slide-benchmarks.png",
     layers: [],
     notes: "Receipts. Plot AI progress 2017→today on a log scale and the line is straight — meaning it's been exponential the whole time. 2017 Transformer · 2020 GPT-3 · 2022 ChatGPT · 2024 Sonnet 3.5 / GPT-4o · 2026 Opus 4.7. Hand on the line — 'this is real, not a vibe.'" },
 
