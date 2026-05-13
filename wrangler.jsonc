@@ -30,6 +30,12 @@
 			"bucket_name": "aie-slides-opennext-cache"
 		}
 	],
+	"routes": [
+		{
+			"pattern": "slides.trilok.ai",
+			"custom_domain": true
+		}
+	],
 	"images": {
 		// Enable image optimization
 		// see https://opennext.js.org/cloudflare/howtos/image
