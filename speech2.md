@@ -68,11 +68,11 @@ Arc: autobiographical pull → metaphor → coding-as-environment → **the curv
 > "Quick aside, in case you haven't seen the term: a fitness function is the score that decides which variants survive. Straight out of genetic algorithms. In a code agent, the harness is the thing that writes that score every run. Keep that in your head for the next slide."
 
 ## 15 · CodeGraff on Forge (60s)
-## 15 · CodeGraff on Forge (60s)
 
 > "CodeGraff is built on top of Forge — SOTA on Terminal-Bench. The authors wrote a beautiful harness; I added a trajectory store, multi-model fan-out, and a selector loop fed by DevSwarm telemetry. Receipts: 1.2 million tokens saved across installs in the last 30 days. 34 thousand ops in the last week. 0.7 ms per op through the daemon. When you prompt CodeGraff, it doesn't go to a single model — it fans out and the answers come back fast. **The harness IS the fitness function.** → codegraff.com"
 
 - The punchline. Land it slowly.
+
 ## 16 · Thanks (25s)
 
 > "Everything is open source — github.com/justrach. 2026 is the year we get a real leap on autonomous agents. Excited to see where everyone takes it. Thanks for having me — Agrim, Sherry, Rachel, Adeline. Have a great conference."
