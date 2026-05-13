@@ -37,7 +37,7 @@ export default function DeckClientV2({ current }: { current: number }) {
       <World layers={slide.layers} bg={slide.bg} />
       <SlideRouterV2 index={current} />
       <TrilokMark />
-      <nav className="absolute bottom-4 left-24 right-4 flex items-center justify-between text-xs font-mono text-ink/60 select-none">
+      <nav className="absolute bottom-4 left-4 right-4 flex items-center justify-between text-xs font-mono text-ink/60 select-none">
         <span>v2 · {String(current).padStart(2, "0")} / {String(slides.length).padStart(2, "0")}</span>
         <span className="tracking-widest">TRILOK · AIE SG · 2026</span>
         <span>→ next  ←  prev  ·  n notes  ·  f fullscreen</span>
