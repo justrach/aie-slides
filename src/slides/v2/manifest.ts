@@ -14,61 +14,67 @@ export interface SlideMeta {
   notes: string;
 }
 
-// v2 — reworked from speech2.m4a. 12 slides, ~10 min.
+// v2 — reworked from speech2.m4a. 14 slides, ~10 min.
 // Autobiographical arc: open-endedness origin → Doctor Strange → coding env
-// paper → trajectory as artifact → my toolchain (Muonry / CodeDB / Nanobrew /
-// DevSwarm) feeds CodeGraff on Forge → closer.
-// Coaching frame kept: "harness IS the fitness function" lands on slide 11.
+// paper → world-models horizon (exponential graph) → trajectory as artifact
+// → toolchain (Muonry / CodeDB / Nanobrew / DevSwarm) → fitness primer →
+// CodeGraff on Forge (punchline) → thanks.
+// Coaching frame kept: "harness IS the fitness function" lands on slide 13.
+// Each bg is custom codex-generated and follows the cat-aging arc.
 export const slides: SlideMeta[] = [
-  { index: 1, title: "Cover", durationSec: 15, bg: "slide-01.png",
+  { index: 1, title: "Cover", durationSec: 15, bg: "slide-cover.png",
     layers: [],
     notes: "Kitten · primordial dawn. 'I built a harness that does well on coding tasks. First — how I got here.' Pause." },
 
-  { index: 2, title: "A paper, not a benchmark", durationSec: 50, bg: "slide-02.png",
+  { index: 2, title: "A paper, not a benchmark", durationSec: 50, bg: "slide-paper.png",
     layers: [],
-    notes: "Kitten · bioluminescent water. 2023, building diffusion with a friend. Came across a paper on agents that evolve in their own environment — models have a notion of 'human interestingness'. My first dive into open-endedness." },
+    notes: "Kitten · scroll with glowing equations. 2023, diffusion with a friend. Came across a paper on agents that evolve in their own environment — models have a notion of 'human interestingness'. My first dive into open-endedness." },
 
   { index: 3, title: "Dormammu, I've come to bargain", durationSec: 50, bg: "slide-dormammu.png",
     layers: [],
-    notes: "Young cat among scattered tools. The Marvel beat. Every loop the environment changes; eventually the agent just wins. This is where world models start mattering — the env isn't static, it's a thing the agent interacts with." },
+    notes: "Young cat vs flaming Dormammu. The Marvel beat. Every loop the environment changes; eventually the agent just wins. This is where world models start mattering." },
 
   { index: 4, title: "Code is the environment", durationSec: 55, bg: "slide-codeenv.png",
     layers: [],
-    notes: "Adolescent cat at mature tree. Last year's paper extended open-endedness to code. Evolve the environment AND the agent. Tools aren't given — they get selected for." },
+    notes: "Adolescent cat watching golden code-rivers in a Ghibli forest. Last year's paper extended open-endedness to code. Evolve env AND agent. Tools selected for." },
 
-  { index: 5, title: "The trajectory, not the weights", durationSec: 35, bg: "slide-08.png",
+  { index: 5, title: "Look at the evolution · world models", durationSec: 40, bg: "slide-worldmodels.png",
     layers: [],
-    notes: "Adolescent cat at three shrines. The artifact worth studying isn't the weights — it's the trajectory: what the agent learned to keep. Bridges into 'how I built that store.'" },
+    notes: "Adolescent cat watches the exponential curve climb. Drop an agent into a real world model and the intelligence curve goes exponential. Today is the small candle at lower-left — world-model agents are the blazing sun at upper-right. This is what's coming." },
 
-  { index: 6, title: "Iteration loops take a beating", durationSec: 40, bg: "slide-09.png",
+  { index: 6, title: "The trajectory, not the weights", durationSec: 35, bg: "slide-trajectory.png",
     layers: [],
-    notes: "Adult cat by blooming tree. Back to CodeGraff. Darwin-Gödel-style loops are brutal. Two levers: tool latency, token volume. Everything I built downstream attacks one of those." },
+    notes: "Adolescent cat beside footprint tablet. The artifact worth studying isn't the weights — it's the trajectory: what the agent learned to keep. Bridges into 'how I built that store.'" },
 
-  { index: 7, title: "Muonry", durationSec: 45, bg: "slide-11.png",
+  { index: 7, title: "Iteration loops take a beating", durationSec: 40, bg: "slide-loops.png",
     layers: [],
-    notes: "Adult cat beside forge. First tool I ever wrote in Zig. Rust compile pain → Zig instant builds. The loop got 10× tighter. Point isn't the language — it's the loop." },
+    notes: "Adult cat at forge with spiraling iteration rings. Back to CodeGraff. Darwin-Gödel-style loops are brutal. Two levers: tool latency, token volume." },
 
-  { index: 8, title: "CodeDB", durationSec: 35, bg: "slide-13.png",
+  { index: 8, title: "Muonry", durationSec: 45, bg: "slide-muonry.png",
     layers: [],
-    notes: "Adult cat beside inscribed tablet. Search is the agent's first sense organ. Make it free, the agent uses it more and reasons less from memory." },
+    notes: "Adult cat with Zig binary vs rusting Rust compiler. First Zig tool. Rust compile pain → Zig instant builds. Loop got 10× tighter. Point isn't the language — it's the loop." },
 
-  { index: 9, title: "Nanobrew", durationSec: 40, bg: "slide-14.png",
+  { index: 9, title: "CodeDB", durationSec: 35, bg: "slide-codedb.png",
     layers: [],
-    notes: "Mature cat at eval-yard gate. 'When I sleep, I want my agents to work.' Sandbox on a Hetzner cluster. apt-get was the bottleneck — Nanobrew is a drop-in Homebrew/apt replacement in Zig (nanobrew.trilok.ai, github.com/justrach/nanobrew). 13× faster warm. More failures per night = more learning." },
+    notes: "Adult cat with search-beam whiskers; one kitten watching. Search is the agent's first sense organ. Make it free." },
 
-  { index: 10, title: "DevSwarm", durationSec: 40, bg: "slide-18.png",
+  { index: 10, title: "Nanobrew", durationSec: 40, bg: "slide-nanobrew.png",
     layers: [],
-    notes: "Older cat + many kittens, triune city. Sequential orchestration is weak. Swarm on one task. The selector inside CodeGraff is fed by DevSwarm telemetry." },
+    notes: "Mature cat + kitten at apothecary bench. 'When I sleep, my agents work.' apt-get inside the sandbox was the bottleneck → Nanobrew: drop-in Homebrew/apt replacement in Zig (nanobrew.trilok.ai). 13× faster warm." },
 
-  { index: 11, title: "Fitness function", durationSec: 25, bg: "slide-16.png",
+  { index: 11, title: "DevSwarm", durationSec: 40, bg: "slide-devswarm.png",
     layers: [],
-    notes: "Quick aside before the punchline. A fitness function is the score that decides which variants survive — straight from genetic algorithms. In a code agent, the harness writes that score every run. Sets up slide 12." },
+    notes: "Mature cat + 6-8 kittens working on one shared object. Sequential orchestration is weak. Swarm on one task. Telemetry feeds the CodeGraff selector." },
 
-  { index: 12, title: "CodeGraff on Forge", durationSec: 60, bg: "slide-17.png",
+  { index: 12, title: "Fitness function", durationSec: 25, bg: "slide-fitness.png",
     layers: [],
-    notes: "Mature cat + many kittens. Forge = SOTA on Terminal-Bench, beautifully written. I added: trajectory store, multi-model fan-out, selector loop. Land the punchline: the harness IS the fitness function." },
+    notes: "Mature cat at scales-of-judgement altar. Primer before the punchline. Fitness function = the score that decides which variants survive. In a code agent, the harness writes it every run." },
 
-  { index: 13, title: "Thanks", durationSec: 25, bg: "slide-19.png",
+  { index: 13, title: "CodeGraff on Forge", durationSec: 60, bg: "slide-codegraff.png",
     layers: [],
-    notes: "Old cat at dawn with next generation. All OSS · github.com/justrach. 2026 is the leap year for autonomous agents. Thanks Agrim, Sherry, Rachel, Adeline." },
+    notes: "Mature cat + kittens on summit; vast harness-machine fanning out to many models. Forge = SOTA on Terminal-Bench. I added trajectory store, multi-model fan-out, selector loop. Land it: the harness IS the fitness function." },
+
+  { index: 14, title: "Thanks", durationSec: 25, bg: "slide-thanks.png",
+    layers: [],
+    notes: "Old cat at dawn with next generation around — mirror of cover. All OSS · github.com/justrach. 2026 is the leap year for autonomous agents. Thanks Agrim, Sherry, Rachel, Adeline." },
 ];

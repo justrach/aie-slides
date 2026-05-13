@@ -3,10 +3,10 @@ import { SlideShell, Title, Sub, Body } from "./SlideShell";
 
 export default function Slide05() {
   return (
-    <SlideShell align="right">
-      <Sub>the artifact</Sub>
-      <Title>The trajectory, not the weights.</Title>
-      <Body>What the agent learned to keep is the thing worth studying.</Body>
+    <SlideShell align="left">
+      <Sub>where this points · world models</Sub>
+      <Title>Look at the evolution.</Title>
+      <Body>Drop an agent into a real world model and the intelligence curve goes exponential. Today is the little candle on the left.</Body>
     </SlideShell>
   );
 }

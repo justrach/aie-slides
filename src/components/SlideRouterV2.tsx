@@ -12,10 +12,11 @@ import Slide10 from "@/slides/v2/Slide10";
 import Slide11 from "@/slides/v2/Slide11";
 import Slide12 from "@/slides/v2/Slide12";
 import Slide13 from "@/slides/v2/Slide13";
+import Slide14 from "@/slides/v2/Slide14";
 
 const slides = [
   Slide01, Slide02, Slide03, Slide04, Slide05, Slide06, Slide07,
-  Slide08, Slide09, Slide10, Slide11, Slide12, Slide13,
+  Slide08, Slide09, Slide10, Slide11, Slide12, Slide13, Slide14,
 ];
 
 export default function SlideRouterV2({ index }: { index: number }) {
