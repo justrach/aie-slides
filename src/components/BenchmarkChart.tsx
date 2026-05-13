@@ -62,9 +62,9 @@ const SERIES: Series[] = [
     label: "Terminal-Bench",
     color: "#52765A",
     data: [
-      { year: 2024, v: 30 },
-      { year: 2025, v: 52 },
-      { year: 2026, v: 68 },
+      { year: 2024, v: 30 },  // Claude 3.5 Sonnet, launch baseline
+      { year: 2025, v: 55 },  // Forge / mid-year harness era
+      { year: 2026, v: 82 },  // Codex CLI / GPT-5.5 SOTA, 2026-04-23 per harbor leaderboard
     ],
     labelDy: 6,
   },
