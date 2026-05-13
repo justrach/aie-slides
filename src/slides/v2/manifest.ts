@@ -28,7 +28,7 @@ export const slides: SlideMeta[] = [
     layers: [],
     notes: "Kitten · bioluminescent water. 2023, building diffusion with a friend. Came across a paper on agents that evolve in their own environment — models have a notion of 'human interestingness'. My first dive into open-endedness." },
 
-  { index: 3, title: "Dormammu, I've come to bargain", durationSec: 50, bg: "slide-05.png",
+  { index: 3, title: "Dormammu, I've come to bargain", durationSec: 50, bg: "slide-dormammu.png",
     layers: [],
     notes: "Young cat among scattered tools. The Marvel beat. Every loop the environment changes; eventually the agent just wins. This is where world models start mattering — the env isn't static, it's a thing the agent interacts with." },
 
