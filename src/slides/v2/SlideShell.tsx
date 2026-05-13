@@ -2,17 +2,18 @@
 import { motion } from "motion/react";
 import type { ReactNode } from "react";
 
-// v2 shell: text always sits on a soft cream scrim so painterly backgrounds
-// never fight readability.
-export function SlideShell({ children, align = "right" }: { children: ReactNode; align?: "left" | "right" | "center" }) {
-  const pos =
-    align === "left" ? "items-end justify-start pl-10 md:pl-16" :
-    align === "center" ? "items-center justify-center px-8" :
-    "items-end justify-end pr-10 md:pr-16";
+// v2 shell: card sits TOP-LEFT by default — natural reading position,
+// painterly bg fills the rest. `align` retained for compatibility but
+// only swaps the horizontal slot.
+export function SlideShell({ children, align = "left" }: { children: ReactNode; align?: "left" | "right" | "center" }) {
+  const horiz =
+    align === "right"  ? "justify-end pr-10 md:pr-16" :
+    align === "center" ? "justify-center px-8" :
+                         "justify-start pl-10 md:pl-16";
   return (
-    <div className={`absolute inset-0 flex ${pos} pb-20 pointer-events-none`}>
+    <div className={`absolute inset-0 flex items-start ${horiz} pt-20 md:pt-24 pointer-events-none`}>
       <motion.div
-        initial={{ opacity: 0, y: 16 }}
+        initial={{ opacity: 0, y: -12 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, ease: [0.4, 0, 0.2, 1], delay: 0.15 }}
         className="relative max-w-[42rem] text-ink px-8 py-7 rounded-xl"

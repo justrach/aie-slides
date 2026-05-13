@@ -1,9 +1,9 @@
 "use client";
-// Trilok logomark — motionless, top-left. Never a character, never animated.
-// Per the brand system, in technical decks the mark stays put as a silhouette.
+// Trilok logomark — motionless, bottom-right. Out of the way of the
+// top-left text scrim. Never a character, never animated.
 export default function TrilokMark() {
   return (
-    <div className="absolute top-3 left-3 pointer-events-none select-none flex items-center gap-2 z-10">
+    <div className="absolute bottom-12 right-4 pointer-events-none select-none flex items-center gap-2 z-10">
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
         src="/trilok_logo_transparent.png"
