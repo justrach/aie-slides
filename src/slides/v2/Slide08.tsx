@@ -1,12 +1,12 @@
 "use client";
 import { SlideShell, Title, Sub, Body } from "./SlideShell";
 
-export default function Slide07() {
+export default function Slide05() {
   return (
     <SlideShell align="right">
-      <Sub>tool · written in zig</Sub>
-      <Title>Muonry.</Title>
-      <Body>Rust: 4–7 min compiles. Zig: instant. The loop got 10× tighter.</Body>
+      <Sub>the artifact</Sub>
+      <Title>The trajectory, not the weights.</Title>
+      <Body>What the agent learned to keep is the thing worth studying.</Body>
     </SlideShell>
   );
 }

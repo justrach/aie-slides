@@ -1,12 +1,12 @@
 "use client";
 import { SlideShell, Title, Sub, Body } from "./SlideShell";
 
-export default function Slide08() {
+export default function Slide06() {
   return (
     <SlideShell align="left">
-      <Sub>tool · index</Sub>
-      <Title>CodeDB.</Title>
-      <Body>Search is the agent&rsquo;s first sense organ. Make it free.</Body>
+      <Sub>building CodeGraff</Sub>
+      <Title>Iteration loops take a beating.</Title>
+      <Body>Speed up the tools. Shrink the tokens. Everything I built attacks one of those.</Body>
     </SlideShell>
   );
 }

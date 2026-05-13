@@ -1,8 +1,8 @@
 # Evolving Agents — v2 (AIE Singapore · May 2026)
 
-Reworked from the speech2.m4a transcript (whisper hallucinations cleaned up: "Raj" → Rach, "CodeGraph" → CodeGraff, "Death Swarm" → DevSwarm, "Muonri" → Muonry, "Nanoboo" → Nanobrew). 14 slides, ~10 minutes.
+Reworked from speech2.m4a (whisper hallucinations cleaned: Raj → Rach, CodeGraph → CodeGraff, Death Swarm → DevSwarm, Muonri → Muonry, Nanoboo → Nanobrew). 16 slides, ~11 minutes.
 
-Arc: autobiographical pull → metaphor → coding-as-environment → **world models horizon (where this points)** → trajectory → toolchain → fitness primer → CodeGraff punchline → closer. Coaching frame from the v1 dry-run stays: **the harness IS the fitness function**, landed on slide 13.
+Arc: autobiographical pull → metaphor → coding-as-environment → **the curve (6 AI stages)** → **receipts on log scale** → **scaling-laws bet** → trajectory → toolchain → fitness primer → CodeGraff punchline → closer. Coaching frame stays: **the harness IS the fitness function**, landed on slide 15.
 
 ---
 
@@ -10,73 +10,70 @@ Arc: autobiographical pull → metaphor → coding-as-environment → **world mo
 
 > "Hi, I'm Rach. I built a harness that does really well on coding tasks. But before I get to that — let me tell you how I got here."
 
-- Title: **Evolving agents.**
-- Name + venue. Pause two seconds.
-
 ## 2 · A paper, not a benchmark (50s)
 
-> "Early 2023. A friend and I were building diffusion models — architectures nobody had tried. While we were experimenting, I came across a paper on giving agents human-like qualities and letting them evolve in their own environment. The claim was that models, now that they're large enough, have a notion of 'human interestingness'. That was my first dive into open-endedness."
-
-- One sentence on stage: **"Agents that evolve in their own environment."**
+> "Early 2023. A friend and I were building diffusion models — architectures nobody had tried. While we were experimenting, I came across a paper on giving agents human-like qualities and letting them evolve in their own environment. The claim: models are now large enough to have a notion of 'human interestingness'. That was my first dive into open-endedness."
 
 ## 3 · Dormammu, I've come to bargain (50s)
 
 > "Think of an open-ended agent the way you'd think of Doctor Strange against Dormammu. Every loop the environment shifts. He keeps fighting until he just gets really good at it. The environment is the selection pressure."
 
-- Marvel beat lands the metaphor.
-
 ## 4 · Code is the environment (55s)
 
 > "Last year a paper extended this idea to code. What if the environment you evolve in is a coding environment? Store the evolutionary state of the environment AND the agent. Let the agent choose its own tools — evolve the tool harness itself."
 
-- Two evolving objects: **agent** + **environment**.
-- Tools aren't given. They're selected for.
+## 5 · The curve · 6 stages of AI (50s)
 
-## 5 · Look at the evolution · the curve (50s)
+> "Forget humans for a second — this is an AI-only curve. Step one: models. Step two, where we are today: models plus harnesses — the scaffolding does the work. Step three: harnesses that evolve themselves — what I built. Step four: agents that evolve themselves, where the harness is just a substrate. Step five: world models — environments rich enough to actually train against. Step six: agents that *come out of* those world models. Look at the curve. We're step two. The galaxy at the top right is step six."
 
-> "Now zoom out — and forget humans for a second, this is an AI-only curve. Step one: models. Step two, where we are today: models plus harnesses — the scaffolding around the model does the work. Step three: harnesses that evolve themselves — what I built. Step four: agents that evolve themselves, where the harness is just a substrate. Step five: world models — environments rich enough to actually train against. Step six: agents that *come out of* those world models. Look at the curve. We're step two. The galaxy at the top right is step six."
+## 6 · 2017 → today · log scale (45s)
 
-- Six steps, escalating glow on the curve.
-- "Forget humans for a second" pre-empts the obvious objection.
-- Bridge: "that's the horizon. Now back to what I had to build to take even one step up."
+> "Receipts. Here's AI from 2017 to today on a *log scale*. A straight line on log scale means exponential. 2017: Transformers paper. 2020: GPT-3. 2022: ChatGPT and the world wakes up. 2024: Sonnet 3.5, GPT-4o. 2026: Opus 4.7 with a million tokens of context, agents actually shipping. The slope has not changed in nine years. This is not a vibe — it's a straight line."
 
-## 6 · The trajectory, not the weights (35s)
+- Hand traces the line as you speak.
+- Land the slope, don't rush.
+
+## 7 · Scaling laws still hold (35s)
+
+> "And scaling laws keep holding — as long as humans stay more interesting than the models. Interestingness is the substrate. The day we stop being more interesting than what we built, the curve flattens. Until then, line goes up."
+
+- Strong claim. Sit with it for a beat before moving on.
+- Bridge: "so what do you actually have to build to ride that curve? Let me show you."
+
+## 8 · The trajectory, not the weights (35s)
 
 > "Once an agent is smart enough to interact with the world, the interesting object isn't the weights. It's the trajectory — what the agent learned to keep. That's also what I had to build first: a place to store that trajectory."
 
-## 7 · Iteration loops take a beating (40s)
+## 9 · Iteration loops take a beating (40s)
 
 > "Back to CodeGraff. Building it was its own evolutionary trip. Darwin-Gödel-style loops take a beating. The fastest way to soften that beating is to speed up the tools the agent uses and shrink the tokens it spends per turn. Two levers. Every tool I built downstream attacks one of them."
 
-## 8 · Muonry (45s)
+## 10 · Muonry (45s)
 
-> "First thing I built was a tool called Muonry. First thing I ever wrote in Zig — I'd written a lot of Rust before. When I saw the compile times I went: oh. I'm not waiting four to seven minutes for a binary anymore. The point isn't Zig. The point is the iteration loop got ten times tighter."
+> "First thing I built was Muonry. First Zig tool I ever shipped — I'd written a lot of Rust before. When I saw the compile times I went: oh. The iteration loop got ten times tighter."
 
-## 9 · CodeDB (35s)
+## 11 · CodeDB (35s)
 
-> "Agents are good at searching text. So I hyper-accelerated that. CodeDB out-frameworks every other indexer I've thrown at it. Search is the agent's first sense organ. Make it free; the agent uses it more, and reasons less from memory."
+> "Agents are good at searching text. So I hyper-accelerated that. Search is the agent's first sense organ. Make it free; the agent uses it more, reasons less from memory."
 
-## 10 · Nanobrew (40s)
+## 12 · Nanobrew (40s)
 
-> "When I sleep, I want my agents to work. The slow part inside the sandbox wasn't compute — it was `apt-get`. Even with snapshots. So I wrote Nanobrew: a drop-in Homebrew + apt-get replacement, in Zig. 13× faster on warm installs. More failures per night = more learning. → nanobrew.trilok.ai"
+> "When I sleep, I want my agents to work. The slow part inside the sandbox wasn't compute — it was `apt-get`. Even with snapshots. So I wrote Nanobrew: a drop-in Homebrew + apt-get replacement, in Zig. 13× faster on warm installs. → nanobrew.trilok.ai"
 
-## 11 · DevSwarm (40s)
+## 13 · DevSwarm (40s)
 
 > "Then DevSwarm. Sequentially orchestrated agents aren't great. What if a swarm just worked on one task together? Telemetry from DevSwarm is what feeds the selector inside CodeGraff."
 
-## 12 · Fitness function (25s)
+## 14 · Fitness function (25s)
 
 > "Quick aside, in case you haven't seen the term: a fitness function is the score that decides which variants survive. Straight out of genetic algorithms. In a code agent, the harness is the thing that writes that score every run. Keep that in your head for the next slide."
 
-- Aside, not a lecture.
+## 15 · CodeGraff on Forge (60s)
 
-## 13 · CodeGraff on Forge (60s)
+> "CodeGraff is built on top of Forge — SOTA on Terminal-Bench. The authors wrote a beautiful harness; I just added a few evolutionary steps from DevSwarm's telemetry. When you prompt CodeGraff, it doesn't go to a single model. It fans out, the agents collaborate, orchestrate, you get the answer fast. **The harness IS the fitness function.**"
 
-> "CodeGraff is built on top of Forge — SOTA on Terminal-Bench. The authors wrote a beautiful harness; I just added a few evolutionary steps drawn from DevSwarm's telemetry. When you prompt CodeGraff, it doesn't go to a single model. It fans out, the agents collaborate, orchestrate, and you get the answer fast. **The harness IS the fitness function.**"
+- The punchline. Land it slowly.
 
-- The punchline.
-- Land it slowly.
-
-## 14 · Thanks (25s)
+## 16 · Thanks (25s)
 
 > "Everything is open source — github.com/justrach. 2026 is the year we get a real leap on autonomous agents. Excited to see where everyone takes it. Thanks for having me — Agrim, Sherry, Rachel, Adeline. Have a great conference."

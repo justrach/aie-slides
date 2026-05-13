@@ -1,12 +1,12 @@
 "use client";
 import { SlideShell, Title, Sub, Body } from "./SlideShell";
 
-export default function Slide12() {
+export default function Slide09() {
   return (
-    <SlideShell pos="bottom-right">
-      <Sub>quick aside</Sub>
-      <Title>Fitness function.</Title>
-      <Body>The score that decides which variants survive. In code agents, the harness writes that score every run.</Body>
+    <SlideShell align="right">
+      <Sub>tool · sandbox</Sub>
+      <Title>Nanobrew.</Title>
+      <Body>When I sleep, my agents work. apt-get inside the sandbox was the slow part — so I wrote a drop-in Homebrew/apt replacement in Zig. 13× faster warm.</Body>
     </SlideShell>
   );
 }
