@@ -1,12 +1,12 @@
 "use client";
-import { SlideShell, Title, Sub } from "./SlideShell";
+import { SlideShell, Title, Sub, Body } from "./SlideShell";
 
 export default function Slide06() {
   return (
     <SlideShell align="left">
-      <Sub>the interesting object</Sub>
-      <Title>Not the weights.<br/>The trajectory.</Title>
-      <Sub>what the agent learned to keep</Sub>
+      <Sub>building CodeGraff</Sub>
+      <Title>Iteration loops take a beating.</Title>
+      <Body>Speed up the tools. Shrink the tokens. Everything I built attacks one of those.</Body>
     </SlideShell>
   );
 }

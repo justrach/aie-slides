@@ -1,12 +1,12 @@
 "use client";
-import { SlideShell, Title, Sub } from "./SlideShell";
+import { SlideShell, Title, Sub, Body } from "./SlideShell";
 
 export default function Slide07() {
   return (
     <SlideShell align="right">
-      <Sub>building CodeGraph</Sub>
-      <Title>Two levers.</Title>
-      <Sub>tool latency · token volume — everything I built attacks one of these</Sub>
+      <Sub>tool · written in zig</Sub>
+      <Title>Muonry.</Title>
+      <Body>Rust: 4–7 min compiles. Zig: instant. The loop got 10× tighter.</Body>
     </SlideShell>
   );
 }

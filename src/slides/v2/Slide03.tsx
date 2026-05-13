@@ -1,12 +1,12 @@
 "use client";
-import { SlideShell, Title, Sub } from "./SlideShell";
+import { SlideShell, Title, Sub, Body } from "./SlideShell";
 
 export default function Slide03() {
   return (
     <SlideShell align="right">
-      <Sub>a different branch of ML</Sub>
-      <Title>Not scale.<br/>Encounter.</Title>
-      <Sub>open-endedness ≠ bigger model · it's what the agent gets to see</Sub>
+      <Sub>the metaphor</Sub>
+      <Title>Dormammu, I&rsquo;ve come to bargain.</Title>
+      <Body>Every loop, the environment changes. Eventually the agent just wins.</Body>
     </SlideShell>
   );
 }

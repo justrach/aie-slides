@@ -1,12 +1,12 @@
 "use client";
-import { SlideShell, Title, Sub } from "./SlideShell";
+import { SlideShell, Title, Sub, Body } from "./SlideShell";
 
 export default function Slide11() {
   return (
     <SlideShell align="right">
-      <Sub>tool · multi-agent</Sub>
-      <Title>DevSwarm.</Title>
-      <Sub>sequential orchestration sucks · a swarm on one task · telemetry feeds the selector</Sub>
+      <Sub>the harness · on Forge</Sub>
+      <Title>CodeGraff.</Title>
+      <Body>Forge is SOTA on Terminal-Bench. I added a trajectory store, multi-model fan-out, and a selector loop. The harness IS the fitness function.</Body>
     </SlideShell>
   );
 }
