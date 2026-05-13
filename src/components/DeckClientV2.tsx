@@ -4,6 +4,7 @@ import { useCallback, useEffect, useState } from "react";
 import { slides } from "@/slides/v2/manifest";
 import World from "./World";
 import SlideRouterV2 from "./SlideRouterV2";
+import TrilokMark from "./TrilokMark";
 
 export default function DeckClientV2({ current }: { current: number }) {
   const router = useRouter();
@@ -35,7 +36,8 @@ export default function DeckClientV2({ current }: { current: number }) {
     <main className="fixed inset-0 overflow-hidden bg-cloud text-ink">
       <World layers={slide.layers} bg={slide.bg} />
       <SlideRouterV2 index={current} />
-      <nav className="absolute bottom-4 left-4 right-4 flex items-center justify-between text-xs font-mono text-ink/60 select-none">
+      <TrilokMark />
+      <nav className="absolute bottom-4 left-24 right-4 flex items-center justify-between text-xs font-mono text-ink/60 select-none">
         <span>v2 · {String(current).padStart(2, "0")} / {String(slides.length).padStart(2, "0")}</span>
         <span className="tracking-widest">TRILOK · AIE SG · 2026</span>
         <span>→ next  ←  prev  ·  n notes  ·  f fullscreen</span>
