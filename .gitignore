@@ -46,3 +46,11 @@ next-env.d.ts
 
 # misc
 *.tsbuildinfo
+
+# OpenNext
+.open-next
+
+# wrangler files
+.wrangler
+.dev.vars*
+!.dev.vars.example
