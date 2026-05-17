@@ -11,8 +11,7 @@ const STATS = [
 
 export default function Slide10() {
   return (
-    <SlideShell pos="top-left">
-      <Sub>tool · drop-in MCP upgrade · zig</Sub>
+    <SlideShell pos="right-middle">
       <Title>Muonry.</Title>
       <p className="mt-3 text-sm md:text-base text-ink/80 max-w-md">
         Stops your agents burning weekly caps on full-file reads. Works with Claude Code, Codex, Cursor, Windsurf. 40× leaner tools, same answer.

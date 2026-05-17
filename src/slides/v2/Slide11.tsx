@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "motion/react";
+import { QRCodeSVG } from "qrcode.react";
 import { SlideShell, Sub, Title } from "./SlideShell";
 
 const STATS = [
@@ -11,7 +12,7 @@ const STATS = [
 
 export default function Slide11() {
   return (
-    <SlideShell pos="top-left">
+    <SlideShell pos="right-middle">
       <Sub>tool · index</Sub>
       <Title>CodeDB.</Title>
       <p className="mt-3 text-sm md:text-base text-ink/75 max-w-md">
@@ -31,7 +32,19 @@ export default function Slide11() {
           </motion.li>
         ))}
       </ul>
-      <p className="mt-4 font-mono text-xs text-ink/55">github.com/justrach/codedb</p>
+      <p className="mt-4 font-mono text-sm text-ink/65">github.com/justrach/codedb  ·  <span className="text-gold">800★+</span></p>
+      <div className="mt-4 flex items-center gap-3 pointer-events-auto">
+        <div className="rounded-md bg-white p-2 shadow-sm">
+          <QRCodeSVG
+            value="https://github.com/justrach/codedb"
+            size={88}
+            level="M"
+            bgColor="#FFFFFF"
+            fgColor="#11110F"
+          />
+        </div>
+        <span className="font-mono text-xs text-ink/55">scan to star</span>
+      </div>
     </SlideShell>
   );
 }

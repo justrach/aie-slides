@@ -1,6 +1,6 @@
 "use client";
 import { motion } from "motion/react";
-import { SlideShell, Sub, Title } from "./SlideShell";
+import { SlideShell, Sub } from "./SlideShell";
 
 const STAGES = [
   "models",
@@ -13,10 +13,10 @@ const STAGES = [
 
 export default function Slide05() {
   return (
-    <SlideShell align="left">
+    <SlideShell pos="left-middle">
       <Sub>look at the evolution · AI only</Sub>
-      <Title>The curve.</Title>
-      <ol className="mt-5 space-y-1.5 font-mono text-sm md:text-base text-ink/85">
+      <h1 className="slide-title text-5xl md:text-7xl lg:text-8xl leading-[1.02]">The curve.</h1>
+      <ol className="mt-6 space-y-2.5 font-mono text-xl md:text-2xl lg:text-3xl text-ink/85">
         {STAGES.map((s, i) => (
           <motion.li
             key={s}
@@ -25,14 +25,15 @@ export default function Slide05() {
             transition={{ delay: 0.4 + i * 0.18, duration: 0.45 }}
             className="flex items-baseline gap-3"
           >
-            <span className="text-gold w-4 text-right">{i + 1}</span>
+            <span className="text-gold w-7 text-right">{i + 1}</span>
             <span>{s}</span>
           </motion.li>
         ))}
       </ol>
-      <p className="mt-5 text-sm md:text-base text-ink/65 max-w-md">
+      <p className="mt-6 text-lg md:text-2xl leading-snug text-ink/70 max-w-xl">
         We&rsquo;re at step 2. Drop into a real world model and the curve goes exponential.
       </p>
     </SlideShell>
   );
 }
+

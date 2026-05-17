@@ -110,10 +110,9 @@ export default function BenchmarkChart() {
           />
         ))}
 
-        {/* data lines */}
+        {/* data lines + endpoint dots */}
         {SERIES.map((s, idx) => {
           const path = linePath(s);
-          const lastPt = [...s.data].reverse().find((p) => p.v !== null);
           return (
             <g key={s.key}>
               <motion.path
@@ -144,39 +143,81 @@ export default function BenchmarkChart() {
                     transition={{ duration: 0.4, delay: 0.7 + idx * 0.3 + i * 0.08 }}
                   />
                 ))}
-              {lastPt && lastPt.v !== null && (
-                <motion.g
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ duration: 0.5, delay: 1.9 + idx * 0.3 }}
-                >
-                  <text
-                    x={xScale(lastPt.year) + 18}
-                    y={yScale(lastPt.v) + (s.labelDy ?? 0)}
-                    fontFamily="JetBrains Mono, monospace"
-                    fontSize={28}
-                    fontWeight={700}
-                    fill={s.color}
-                    style={{ paintOrder: "stroke", stroke: "rgba(248,244,234,0.85)", strokeWidth: 4 }}
-                  >
-                    {s.label}
-                  </text>
-                  <text
-                    x={xScale(lastPt.year) + 18}
-                    y={yScale(lastPt.v) + (s.labelDy ?? 0) + 28}
-                    fontFamily="JetBrains Mono, monospace"
-                    fontSize={22}
-                    fontWeight={600}
-                    fill={s.color}
-                    style={{ paintOrder: "stroke", stroke: "rgba(248,244,234,0.85)", strokeWidth: 4 }}
-                  >
-                    {lastPt.v}%
-                  </text>
-                </motion.g>
-              )}
             </g>
           );
         })}
+
+        {/* Endpoint labels with vertical-collision avoidance.
+            Each label is ~62px tall (name 26 + value 22 + gap). Sort by raw Y
+            and bump each subsequent label down so they never overlap. */}
+        {(() => {
+          const LABEL_H = 62;
+          const endpoints = SERIES.map((s, idx) => {
+            const lastPt = [...s.data].reverse().find((p) => p.v !== null);
+            if (!lastPt || lastPt.v === null) return null;
+            return {
+              idx,
+              series: s,
+              x: xScale(lastPt.year),
+              rawY: yScale(lastPt.v),
+              value: lastPt.v,
+            };
+          }).filter((e): e is NonNullable<typeof e> => e !== null);
+
+          const sorted = [...endpoints].sort((a, b) => a.rawY - b.rawY);
+          const placed: Record<number, number> = {};
+          let prevBottom = -Infinity;
+          for (const e of sorted) {
+            const desired = Math.max(e.rawY - 14, prevBottom + 6);
+            placed[e.idx] = desired;
+            prevBottom = desired + LABEL_H;
+          }
+
+          return endpoints.map((e) => {
+            const labelY = placed[e.idx];
+            return (
+              <motion.g
+                key={`label-${e.series.key}`}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.5, delay: 1.9 + e.idx * 0.3 }}
+              >
+                {/* faint connector from endpoint dot to label */}
+                <line
+                  x1={e.x + 9}
+                  y1={e.rawY}
+                  x2={e.x + 16}
+                  y2={labelY + 14}
+                  stroke={e.series.color}
+                  strokeWidth={1.5}
+                  strokeOpacity={0.6}
+                />
+                <text
+                  x={e.x + 20}
+                  y={labelY + 18}
+                  fontFamily="JetBrains Mono, monospace"
+                  fontSize={26}
+                  fontWeight={700}
+                  fill={e.series.color}
+                  style={{ paintOrder: "stroke", stroke: "rgba(248,244,234,0.9)", strokeWidth: 5 }}
+                >
+                  {e.series.label}
+                </text>
+                <text
+                  x={e.x + 20}
+                  y={labelY + 44}
+                  fontFamily="JetBrains Mono, monospace"
+                  fontSize={22}
+                  fontWeight={600}
+                  fill={e.series.color}
+                  style={{ paintOrder: "stroke", stroke: "rgba(248,244,234,0.9)", strokeWidth: 5 }}
+                >
+                  {e.value}%
+                </text>
+              </motion.g>
+            );
+          });
+        })()}
       </svg>
     </div>
   );

@@ -1,6 +1,8 @@
 "use client";
 import Slide01 from "@/slides/v2/Slide01";
 import Slide02 from "@/slides/v2/Slide02";
+import SlideSun from "@/slides/v2/SlideSun";
+import SlideBridge from "@/slides/v2/SlideBridge";
 import Slide03 from "@/slides/v2/Slide03";
 import Slide04 from "@/slides/v2/Slide04";
 import Slide05 from "@/slides/v2/Slide05";
@@ -17,8 +19,8 @@ import Slide15 from "@/slides/v2/Slide15";
 import Slide16 from "@/slides/v2/Slide16";
 
 const slides = [
-  Slide01, Slide02, Slide03, Slide04, Slide05, Slide06, Slide07, Slide08,
-  Slide09, Slide10, Slide11, Slide12, Slide13, Slide14, Slide15, Slide16,
+  Slide01, Slide02, SlideSun, SlideBridge, Slide03, Slide04, Slide05, Slide06, Slide07,
+  Slide08, Slide09, Slide10, Slide11, Slide12, Slide13, Slide14, Slide15, Slide16,
 ];
 
 export default function SlideRouterV2({ index }: { index: number }) {

@@ -2,8 +2,7 @@
 import { motion } from "motion/react";
 import type { ReactNode } from "react";
 
-type Pos = "top-left" | "top-right" | "bottom-left" | "bottom-right" | "center";
-
+type Pos = "top-left" | "top-right" | "bottom-left" | "bottom-right" | "center" | "left-middle" | "right-middle";
 // v2 shell: card sits TOP-LEFT by default (natural reading position).
 // Per-slide override via `pos` for compositions where the painting
 // occupies a different corner.
@@ -20,8 +19,9 @@ export function SlideShell({ children, pos = "top-left", align }: { children: Re
     effectivePos === "bottom-left"  ? "items-end   justify-start pb-20 md:pb-24 pl-10 md:pl-16" :
     effectivePos === "bottom-right" ? "items-end   justify-end   pb-20 md:pb-24 pr-10 md:pr-16" :
     effectivePos === "center"       ? "items-center justify-center px-8" :
+    effectivePos === "left-middle"  ? "items-center justify-start pl-10 md:pl-16" :
+    effectivePos === "right-middle" ? "items-center justify-end   pr-10 md:pr-16" :
                                       "items-start justify-start pt-20 md:pt-24 pl-10 md:pl-16";
-
   return (
     <div className={`absolute inset-0 flex ${cls} pointer-events-none`}>
       <motion.div

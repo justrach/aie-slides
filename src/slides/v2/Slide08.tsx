@@ -6,7 +6,7 @@ export default function Slide05() {
     <SlideShell align="right">
       <Sub>the artifact</Sub>
       <Title>The trajectory, not the weights.</Title>
-      <Body>What the agent learned to keep is the thing worth studying.</Body>
+      <Body>DNA kept what worked. Trajectories keep what your agent learned. The artifact worth studying is the path, not the weights.</Body>
     </SlideShell>
   );
 }

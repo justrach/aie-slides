@@ -1,6 +1,7 @@
 "use client";
 import { motion } from "motion/react";
 import { SlideShell, Sub, Title } from "./SlideShell";
+import { QRCodeSVG } from "qrcode.react";
 
 const PARTS = [
   ["base",        "Forge — SOTA on Terminal-Bench"],
@@ -11,7 +12,7 @@ const PARTS = [
 
 export default function Slide15() {
   return (
-    <SlideShell pos="top-left">
+    <SlideShell pos="bottom-right">
       <Sub>the harness</Sub>
       <Title>CodeGraff.</Title>
       <p className="mt-3 text-base md:text-lg text-ink/85 max-w-md">
@@ -31,6 +32,22 @@ export default function Slide15() {
           </motion.li>
         ))}
       </ul>
+      <p className="mt-4 font-mono text-sm text-ink/65">github.com/justrach/codegraff</p>
+      <div className="mt-4 flex items-center gap-3 pointer-events-auto">
+        <div className="rounded-md bg-white p-2 shadow-sm">
+          <QRCodeSVG
+            value="https://github.com/justrach/codegraff"
+            size={88}
+            level="M"
+            bgColor="#FFFFFF"
+            fgColor="#11110F"
+          />
+        </div>
+        <span className="font-mono text-xs text-ink/55">scan to star</span>
+      </div>
+      <p className="mt-4 font-mono text-xs text-ink/55 max-w-md">
+        receipts: Zhang et al. 2025  —  Darwin G&ouml;del Machine (arXiv:2505.22954)
+      </p>
     </SlideShell>
   );
 }
